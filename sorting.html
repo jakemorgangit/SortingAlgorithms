@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #212529;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 900px;
+        }
+
+        canvas {
+            display: block;
+            background: #343a40;
+            height: 60vh;
+            width: 100%;
+        }
+	
+	    .info-box {
+            border: 1px solid #6c757d;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center text-info mb-4">Sorting Algorithm Visualiser</h1>
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+                <div id="arraySizeDisplay">Array Size: </div>
+                <input type="range" id="arraySize" name="arraySize" min="10" max="1000" class="mt-2">
+            </div>
+
+            <div>
+                <label for="algorithm" class="me-2">Algorithm:</label>
+                <select id="algorithm" class="form-control bg-dark text-light">
+                    <option value="bubbleSort">Bubble Sort</option>
+                    <option value="selectionSort">Selection Sort</option>
+                    <option value="quickSort">Quick Sort</option>
+                    <option value="mergeSort">Merge Sort</option>
+                    <option value="insertionSort">Insertion Sort</option>
+                    <option value="heapSort">Heap Sort</option>
+                    <option value="shellSort">Shell Sort</option>
+                    <option value="bucketSort">Bucket Sort</option>
+                    <option value="radixSort">Radix Sort</option>
+                    <option value="countingSort">Counting Sort</option>
+                    <option value="timSort">Tim Sort</option>
+                </select>
+            </div>
+
+            <div>
+                <button class="btn btn-primary" id="sortButton">Sort</button>
+            </div>
+        </div>
+
+        <div class="info-box" id="infoBox"></div>
+        <h3 id="timeElapsed">Time elapsed: 0ms</h3>
+        <canvas id="canvas"></canvas>
+    </div>
+</body>
+</html>
