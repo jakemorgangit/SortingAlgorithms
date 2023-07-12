@@ -8,3 +8,6 @@ Still a bit buggy but works for the most part.  A page refresh can make the bugs
 
 Demo here:
 https://jakemorgan.co.uk/projects/SortingJS
+
+Todo:
+* Fix `bucketsort`
